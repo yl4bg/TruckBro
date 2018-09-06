@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.nevvea.app.anapptest.Activities.ChatDetail">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/chat_detail_bk"
+        android:scaleType="fitXY"/>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/chat_detail_sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="40dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParalaxOffset="170dp"
+        sothree:umanoFadeColor="@color/transparent"
+        sothree:umanoOverlay="true"
+        sothree:umanoDragView="@+id/dragView">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--上面的聊天内容-->
+            <anapp.truck.com.anapp.utility.ResizableListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/chat_detail_listView"
+                android:divider="@color/transparent"
+                android:paddingBottom="60dp"
+                android:stackFromBottom="true"
+                android:listSelector="@android:color/transparent"/>
+
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/input_background"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/dragView">
+
+            <!-- 三个按键的部分-->
+            <RelativeLayout
+                android:id="@+id/chat_detail_toolbar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="25.42095dp"
+                android:paddingRight="@dimen/chat_detail_toolbar_side_padding"
+                android:background="@drawable/input_folded_background">
+
+                <!-- 左-->
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/chat_detail_load_button"
+                    android:src="@drawable/load_button"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="@dimen/chat_detail_toolbuttons_topbuttom_padding"
+                    android:paddingBottom="@dimen/chat_detail_toolbuttons_topbuttom_padding"/>
+                <!--中-->
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/chat_detail_up_arrow"
+                    android:src="@drawable/up_arrow"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="@dimen/chat_detail_toolbuttons_topbuttom_padding"
+                    android:paddingBottom="@dimen/chat_detail_toolbuttons_topbuttom_padding"/>
+
+                <!--右-->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/chat_detail_keyboard_switch"
+                    android:src="@drawable/keyboard_switch"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="@dimen/chat_detail_toolbuttons_topbuttom_padding"
+                    android:paddingBottom="@dimen/chat_detail_toolbuttons_topbuttom_padding" />
+
+                <!--中2-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    style="?android:attr/buttonStyleSmall"
+                    android:text="发送"
+                    android:id="@+id/chat_detail_send_button"
+                    android:layout_toLeftOf="@id/chat_detail_keyboard_switch"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:id="@+id/chat_detail_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_toRightOf="@id/chat_detail_load_button"
+                    android:layout_toLeftOf="@id/chat_detail_send_button"
+                    android:layout_marginLeft="11.62dp"
+                    android:paddingLeft="7.263dp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <!-- 藏起来的麦克风那部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|top"
+                android:background="@drawable/input_background"
+                android:id="@+id/chat_detail_voice_input_panel">
+
+                <!-- this relative layout exists so that the microphone button can stay
+                  at a fixed position-->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="按住说话"
+                        android:gravity="center"
+                        android:textSize="19sp"
+                        android:id="@+id/chat_detail_press_to_speak" />
+
+                    <!-- 录音动画 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0:00"
+                        android:textSize="@dimen/chat_detail_timer_textsize"
+                        android:textColor="@color/white"
+                        android:background="@drawable/animation_list_speaking"
+                        android:id="@+id/chat_detail_timer_textview"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/chat_detail_microphone_button"
+                    android:src="@drawable/voice_button"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>

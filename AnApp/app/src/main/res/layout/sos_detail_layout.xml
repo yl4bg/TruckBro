@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road_detail_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/sos_detail_top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="49.02612dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/event_page_top_banner"
+        android:gravity="center_vertical|center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="SOS详情"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/sos_detail_btm_banner"
+        android:layout_below="@+id/sos_detail_top_banner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/user_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="90.23117dp"
+                android:background="@drawable/sos_user_bg"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/head_pic"
+                    android:layout_width="62.644485dp"
+                    android:layout_height="62.644485dp"
+                    android:layout_marginLeft="26.147265dp"
+                    android:src="@drawable/sample_profile_pic1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="62.644485dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/head_pic">
+
+                    <TextView
+                        android:id="@+id/sos_user_name"
+                        android:layout_width="70dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000000"
+                        android:text="读取中..." />
+
+                    <TextView
+                        android:id="@+id/sos_license_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/sos_user_name"
+                        android:text="读取中..." />
+
+                    <TextView
+                        android:id="@+id/sos_myTruck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/sos_license_no"
+                        android:text="读取中..." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/home_text"
+                        android:text="家乡：" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/home_text"
+                        android:id="@+id/sos_hometown"
+                        android:text="读取中..." />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sos_detail_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="90.23117dp"
+                android:background="@drawable/sos_detail_bg"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/event_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="13dp"
+                        android:src="@drawable/sos_big"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="9.76563dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.342035dp">
+
+                        <TextView
+                            android:id="@+id/directionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="东南"
+                            android:textColor="#141414"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/distanceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45.75771dp"
+                            android:text="10.5公里"
+                            android:textColor="#141414"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/roadNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15.894695dp"
+                        android:text="工人体育场南路"
+                        android:textColor="#323232"
+                        android:textSize="15sp" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/timeText"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="6.349955dp"-->
+                    <!--android:text="30 分钟前"-->
+                    <!--android:textColor="#323232"-->
+                    <!--android:textSize="12sp" />-->
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="38.131425dp"
+                android:gravity="center_horizontal|center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/voice_play_bg"
+                    android:layout_width="75dp"
+                    android:layout_height="23dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/voice_play_bg">
+
+                    <FrameLayout
+                        android:id="@+id/voice_play_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp">
+
+                        <ImageView
+                            android:id="@+id/voice_play"
+                            android:layout_width="7dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/play_left_3"
+                            android:scaleType="center" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="5.44734dp"
+                    android:layout_height="5.44734dp"
+                    android:layout_marginLeft="2.72367dp"
+                    android:background="@drawable/red_btn"
+                    android:id="@+id/voice_unheard"/>
+
+                <ImageView
+                    android:id="@+id/sos_phone"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="9.72367dp"
+                    android:src="@drawable/phone_icon" />
+
+                <ImageView
+                    android:id="@+id/sos_sms"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="5.72367dp"
+                    android:src="@drawable/sms_icon" />
+
+                <ImageView
+                    android:id="@+id/sos_chat"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="5.72367dp"
+                    android:src="@drawable/circle_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="62.644485dp"
+                android:background="@drawable/description_layout_bg">
+
+                <TextView
+                    android:id="@+id/descriptionText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="26.147265dp"
+                    android:layout_marginRight="26.147265dp"
+                    android:layout_marginTop="4.902615dp"
+                    android:text="(没有描述)"
+                    android:textColor="#787878"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/publisher_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="27.23673dp"
+                android:layout_marginTop="10.349955dp"
+                android:background="@drawable/publisher_detail_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/location_icon_red"
+                        android:layout_width="12dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/location_icon_red" />
+
+                    <TextView
+                        android:id="@+id/addressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:text="湖北省，武汉市，蔡甸区"
+                        android:textColor="#505050"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/timeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="20分钟前"
+                        android:textColor="#505050"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/sos_publisher_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="来自李全蛋"
+                        android:textColor="#505050"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map"
+                android:layout_width="fill_parent"
+                android:layout_height="245.130615dp"
+                android:layout_marginTop="10.894695dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.894845dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_marginTop="5.894845dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_marginTop="5.894845dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/sos_detail_btm_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/event_page_bottom_banner"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/upvote_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/upvote_icon"
+                android:layout_width="39.5273dp"
+                android:layout_height="29.415675dp"
+                android:layout_marginLeft="38.13144dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.171025dp"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/upvote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#b4b4b4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="38.131425dp"
+            android:background="@drawable/eventdetail_banner_btm_divider" />
+
+        <LinearLayout
+            android:id="@+id/report_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/report_icon"
+                android:layout_width="39.5273dp"
+                android:layout_height="33.77355dp"
+                android:layout_marginLeft="38.13144dp"
+                android:src="@drawable/report_icon_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.171025dp"
+                android:text="举报"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/report_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#b4b4b4"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

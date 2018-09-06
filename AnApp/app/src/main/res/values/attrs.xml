@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO 这行很重要 字体用-->
+    <attr name="textFieldStyle" format="reference"/>
+
+</resources>

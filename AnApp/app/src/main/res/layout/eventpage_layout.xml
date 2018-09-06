@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road_detail_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.02612dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/event_page_top_banner">
+
+        <ImageView
+            android:layout_width="40.31037dp"
+            android:layout_height="40.31037dp"
+            android:layout_marginLeft="21.78939dp"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="3dp"/>
+
+        <ImageView
+            android:id="@+id/newEventButton"
+            android:layout_width="82.08dp"
+            android:layout_height="22.23dp"
+            android:layout_marginRight="17.97624dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:gravity="right"
+            android:scaleType="fitXY"
+            android:src="@drawable/publish_road_info" />
+
+
+    </RelativeLayout>
+
+    <!--<ProgressBar-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@android:style/Widget.ProgressBar.Large"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_below="@id/titleBarText"-->
+    <!--android:layout_gravity="center"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="290dp"
+            android:layout_height="fill_parent">
+
+            <ListView
+                android:id="@+id/event_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/event_page_right_banner"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yellow_light_dark"
+                android:layout_width="47dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/yellow_light_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="1"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="祝您一路平安"
+                android:textColor="#b4b400"
+                android:id="@+id/safety_text"
+                android:textSize="27sp"/>
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/travel_together_layout"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ems="1"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="正有"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="..."
+                    android:id="@+id/travel_together_count"
+                    android:textColor="#c8c800"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ems="1"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="位兄弟与您同行"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/green_light_dark"
+                android:layout_width="47dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/green_light_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="1"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="10.894695dp"
+                android:layout_marginRight="8.171025dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:text="闯客科技"
+                android:textColor="#787878"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

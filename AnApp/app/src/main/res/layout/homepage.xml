@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bk">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainPageFlipper">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                />
+
+            <!--<ImageButton-->
+            <!--android:layout_width="27dp"-->
+            <!--android:layout_height="27dp"-->
+            <!--android:id="@+id/settingButton"-->
+            <!--android:background="@drawable/settings_icon"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginEnd="15dp" />-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp">
+
+                    <ImageView
+                        android:layout_width="15.5dp"
+                        android:layout_height="14dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/home_profile_2"
+                        android:src="@drawable/list"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="fitXY"
+                            android:id="@+id/home_profile"
+                            android:src="@drawable/sample_profile_pic"
+                            android:layout_marginLeft="5dp"/>
+
+                        <ImageView
+                            android:layout_width="7.5dp"
+                            android:layout_height="7.5dp"
+                            android:scaleType="fitXY"
+                            android:id="@+id/star"
+                            android:src="@drawable/barefoot"
+                            android:layout_marginLeft="41dp"
+                            android:layout_marginTop="15dp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="186dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/bro_word"
+                    android:src="@drawable/bro_word"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="20dp"/>
+
+                <ImageView
+                    android:layout_width="111.5dp"
+                    android:layout_height="92dp"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/logo"
+                    android:src="@drawable/rotated_logo"
+                    android:layout_marginLeft="270dp"
+                    android:layout_marginTop="68dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="155dp"
+                        android:layout_height="105.5dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/home_event"
+                        android:src="@drawable/home_event"
+                        android:layout_marginLeft="66dp"
+                        android:layout_marginTop="110dp"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/home_unread1"
+                        android:src="@drawable/home_unread"
+                        android:layout_marginLeft="194dp"
+                        android:layout_marginTop="112dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="201dp"
+                        android:layout_marginTop="108dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="155dp"
+                    android:layout_height="105.5dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/home_chat"
+                    android:src="@drawable/home_chat"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/home_unread2"
+                    android:src="@drawable/home_unread"
+                    android:layout_marginLeft="129dp"
+                    android:layout_marginTop="7dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="136dp"
+                    android:layout_marginTop="3dp"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="97dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/home_sos"
+                    android:src="@drawable/sos"
+                    android:layout_marginLeft="205dp"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="155dp"
+                android:layout_height="105.5dp"
+                android:scaleType="fitXY"
+                android:id="@+id/home_phone"
+                android:src="@drawable/home_phone"
+                android:layout_marginLeft="66dp"
+                android:layout_marginTop="13dp"/>
+
+            <ImageView
+                android:layout_width="83.5dp"
+                android:layout_height="18dp"
+                android:scaleType="fitXY"
+                android:id="@+id/drive_mode"
+                android:src="@drawable/drive_mode"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="40dp"/>
+
+
+        </LinearLayout>
+    </ViewFlipper>
+</LinearLayout>

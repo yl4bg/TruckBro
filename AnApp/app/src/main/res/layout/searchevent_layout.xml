@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entire_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.02612dp"
+        android:background="@drawable/event_page_top_banner"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="40.31037dp"
+            android:layout_height="40.31037dp"
+            android:layout_marginLeft="21.78939dp"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/titleBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="路况搜索"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/restart_search"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15.78939dp"
+            android:visibility="invisible"
+            android:background="@drawable/restart_search" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/allWheelsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/wheel_layout_upper"
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="26.147265dp"
+            android:gravity="center_horizontal|center_vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical">
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/province_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="27.23673dp"
+                    android:layout_marginRight="18.52098dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="43.5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search_divider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical">
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/city_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="18.52098dp"
+                    android:layout_marginRight="18.52098dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="43.5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search_divider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical">
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/district_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="18.52098dp"
+                    android:layout_marginRight="27.23673dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+
+        <LinearLayout
+            android:id="@+id/wheel_layout_lower"
+            android:layout_width="fill_parent"
+            android:layout_height="80.46819dp"
+            android:layout_marginTop="90.42dp"
+            android:orientation="horizontal">
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/roadTypeChoice"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="53.5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search_divider"/>
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/roadNumChoice"
+                android:layout_width="240dp"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50.660325dp">
+
+            <TextView
+                android:id="@+id/search_events_button"
+                android:layout_width="fill_parent"
+                android:layout_height="44.123505dp"
+                android:layout_marginLeft="29.415675dp"
+                android:layout_marginRight="29.415675dp"
+                android:background="@drawable/search_btn_bg"
+                android:gravity="center"
+                android:text="开始搜索"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/event_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="3dp" />
+
+
+</LinearLayout>

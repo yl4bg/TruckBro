@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="群名"
+        android:textColor="@color/white"
+        android:textSize="@dimen/action_bar_title_textsize"
+        android:id="@+id/chat_detail_title"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+
+    <!-- 右上三个按键 可以考虑搞大点 太小不好按-->
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:id="@+id/chat_detail_toggle_mute"
+        android:src="@drawable/muted_false"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:layout_marginRight="0dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:id="@+id/chat_detail_toggle_pin"
+        android:src="@drawable/pinned_false"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/chat_detail_toggle_mute"
+        android:layout_marginRight="5dp"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:id="@+id/chat_detail_toggle_lock"
+        android:src="@drawable/locked_false"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/chat_detail_toggle_pin"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

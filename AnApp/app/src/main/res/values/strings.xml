@@ -1,0 +1,147 @@
+<resources>
+    <string name="download_link">http://colab-sbx-170.oit.duke.edu:8080/AServer/download.do</string>
+    <string name="server_prefix">http://colab-sbx-170.oit.duke.edu:8080/AServer</string>
+    <string name="alibucket">http://truckapp.oss-cn-hangzhou.aliyuncs.com/</string>
+
+    <string name="service_phone_num">07103394466</string>
+
+    <string name="app_name">TruckBros</string>
+    <string name="refresh">Refresh</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="logout">Logout</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="incorrect_password">Incorrect Password</string>
+    <string name="signup_pressed">Signup Pressed</string>
+    <string name="refreshing">Refreshing</string>
+    <string name="no_connection">Connecting to server failed</string>
+    <string name="invalid_cookie">Invalid cookie</string>
+
+    <string name="signup_title">Signup</string>
+    <string name="signup_username">Enter Username</string>
+    <string name="signup_phone_number">Enter Phone Number</string>
+    <string name="signup_password">Enter Password</string>
+    <string name="signup_confirm_password">Enter Password Again</string>
+    <string name="signup_real_name">Enter Real Name (Optional)</string>
+    <string name="signup_license_no">Enter Driver License No (Optional)</string>
+    <string name="signup_company_name">Enter Company Name (Optional)</string>
+    <string name="signup_enter_confirmation">Enter Confirmation Code</string>
+    <string name="signup_request_confirmation">Press to Request Confirmation Code</string>
+    <string name="signup_submit">Submit</string>
+    <string name="signup_password_not_match">Password Does Not Match</string>
+    <string name="signup_wrong_confirmation">Wrong Confirmation Code. Please Check or Request a New One</string>
+    <string name="phone_num_wrong_format">Wrong Phone Number Format</string>
+    <string name="login_cookie_storage_file_name">login_cookie</string>
+    <string name="signup_wrong_username">Wrong Username Format</string>
+    <string name="signup_successful">Signup is successful. Please login with your username and password. </string>
+    <string name="event_adapter_divider">DIVISION</string>
+    <string name="event_address_left">(Event Address:</string>
+    <string name="event_address_right">)</string>
+    <string name="click_view_image_hint"> (Click to view image)</string>
+    <string name="event_detail">Event Detail</string>
+    <string name="back_to_event">Back to Event</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="entering_personal_center">Entered Personal Center</string>
+    <string name="chat">YikYak</string>
+    <string name="chat_refresh">Chat refreshing...</string>
+    <string name="mapview_button">MapView</string>
+    <string name="current_position">Current Position</string>
+    <string name="event_position">Event Position</string>
+    <string name="report_sabotage">Report</string>
+    <string name="kilometer">km</string>
+    <string name="referbro">Refer</string>
+    <string name="invite_sent">Invitation sent to </string>
+    <string name="sms_failed">Error when sending SMS</string>
+    <string name="searching">Searching</string>
+    <string name="back_chatlist">Back to_Chats</string>
+    <string name="comment_refresh">Comment refreshing...</string>
+    <string name="report_roadnum">Road Number</string>
+    <string name="optional">(Optional)</string>
+    <string name="SOS">SOS Request Sent</string>
+    <string name="upload_SOS_title">Help Request</string>
+    <string name="logged_in">Logged in</string>
+    <string name="sos">SOS</string>
+    <string name="report">Report</string>
+    <string name="send_chat">Send</string>
+    <string name="chat_box_hint">Send new message</string>
+    <string name="upvote">Up</string>
+    <string name="downvote">Down</string>
+    <string name="reply_append">replies</string>
+    <string name="reply_box_hint">Reply</string>
+    <string name="user_profile_title">User Profile</string>
+    <string name="upload_report_title">Upload Report</string>
+    <string name="report_description_hint">(Optional) Enter description (max 100 characters)</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="report_type">Event Type</string>
+    <string name="report_layout_description">Event Description</string>
+    <string name="max3">Cannot upload more than 3 photos</string>
+    <string name="event_upload_submit">Submit</string>
+    <string name="event_type_no_blank">Please select event type</string>
+    <string name="search_title">Search</string>
+    <string name="province">Province</string>
+    <string name="city">City</string>
+    <string name="town">Town</string>
+    <string name="road">Road</string>
+    <string name="back">Back</string>
+    <string name="search_all_blank">At least one field must be filled</string>
+
+    <string name="event_type_accident">Accident</string>
+    <string name="event_type_trafficjam">Tranffic Jam</string>
+    <string name="event_type_regulation">Regulation</string>
+    <string name="event_type_limitedflow">Limited Flow</string>
+    <string name="event_type_construction">Construction</string>
+    <string name="event_type_other">Other</string>
+    <string name="event_type_help">Help</string>
+
+    <string-array name="event_type_array">
+        <item>(Click to choose)</item>
+        <item>Traffic Jam</item>
+        <item>Accident</item>
+        <item>Regulation</item>
+        <item>Limited Flow</item>
+        <item>Construction</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- API params names -->
+    <string name="api_login">login</string>
+    <string name="api_register">register</string>
+
+    <!-- Other -->
+    <string name="chat_delimiter">DIVISION</string>
+    <string name="server_err">Server error. Please try again later.</string>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_invite">Invite Bros</string>
+    <string name="action_lock">Lock</string>
+    <string name="action_mute">Mute</string>
+    <string name="action_pin">Pin</string>
+
+    <string name="title_activity_chat_main">ChatMainActivity</string>
+    <string name="title_activity_user_profile">UserProfile</string>
+    <string name="title_activity_chat_detail">ChatDetail</string>
+
+    <string name="private_info">(不可见)</string>
+    <string name="offical_name">官方</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_forget_password">ForgetPassword</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_driving_mode">DrivingMode</string>
+</resources>
+

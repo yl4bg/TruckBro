@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 左边的logo-->
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:id="@+id/chat_main_actionbar_logo"
+        android:src="@drawable/logo_73_90"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"/>
+
+    <!-- 右边的邀请兄弟-->
+    <ImageView
+        android:layout_width="78.98653dp"
+        android:layout_height="49.02612dp"
+        android:id="@+id/chat_main_actionbar_invite"
+        android:src="@drawable/invite_145_90"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dp"/>
+</RelativeLayout>

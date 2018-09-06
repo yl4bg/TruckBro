@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="79dp"
+    android:id="@+id/road_cond_box">
+
+    <!-- has a padding bottom so that the red border doesn't overlay on this bg-->
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/road_cond_bg"
+        android:paddingBottom="1.7dp"
+        android:id="@+id/road_cond_bg"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="25dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/event_single_cell_unoffical_banner"
+        android:id="@+id/single_cell_left_banner">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/road_cond_bg"
+            android:layout_marginBottom="1.7dp"
+            android:layout_alignTop="@id/road_cond_bg"
+            android:textSize="13sp"
+            android:textColor="#141414"
+            android:gravity="right"
+            android:paddingTop="3.99472dp"
+            android:paddingRight="2.90525dp"
+            android:text="李全蛋"
+            android:id="@+id/left_banner_user_name" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/single_cell_left_banner"
+        android:layout_marginLeft="7.26313dp"
+        android:layout_marginTop="7.17894dp"
+        android:layout_marginBottom="4.72103dp"
+        android:src="@drawable/crowded_new_symbol"
+        android:id="@+id/event_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="18dp"
+        android:textSize="17sp"
+        android:layout_marginTop="4.35260dp"
+        android:text="拥堵"
+        android:id="@+id/typeText"
+        android:textColor="#141414"
+        android:layout_marginLeft="100dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/single_cell_right_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/road_cond_bg"
+        android:layout_alignTop="@id/road_cond_bg"
+        android:paddingTop="10.53154dp"
+        android:paddingRight="11.6210dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:id="@+id/upvote_layout">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:src="@drawable/thank_icon"
+                android:id="@+id/road_cond_thank_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_toRightOf="@id/road_cond_thank_icon"
+                android:layout_alignTop="@id/road_cond_thank_icon"
+                android:layout_alignBottom="@id/road_cond_thank_icon"
+                android:gravity="center_vertical"
+                android:id="@+id/upvote_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:id="@+id/report_layout"
+            android:layout_below="@id/upvote_layout"
+            android:layout_alignLeft="@id/upvote_layout">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:src="@drawable/report_icon_new"
+                android:id="@+id/road_cond_report_icon"
+                android:layout_marginBottom="7.98944dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_toRightOf="@id/road_cond_report_icon"
+                android:layout_alignTop="@id/road_cond_report_icon"
+                android:layout_alignBottom="@id/road_cond_report_icon"
+                android:gravity="center_vertical"
+                android:id="@+id/report_text" />
+
+        </LinearLayout>
+    </LinearLayout>>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="东南"
+        android:textSize="21sp"
+        android:textColor="#141414"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/directionText"
+        android:layout_marginTop="8.35260dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/event_icon"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.5公里"
+        android:textSize="21sp"
+        android:textColor="#141414"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/distanceText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8.35260dp"
+        android:layout_toRightOf="@id/directionText"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/event_icon"
+        android:layout_toLeftOf="@id/single_cell_right_layout"
+        android:layout_alignBottom="@id/road_cond_bg"
+        android:layout_marginBottom="15.62101dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工人体育场南路"
+            android:textColor="#323232"
+            android:textSize="16sp"
+            android:id="@+id/roadNum" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30分钟前"
+            android:textColor="#505050"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:id="@+id/timeText"
+            android:layout_marginLeft="3dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/event_icon"
+        android:layout_toLeftOf="@id/single_cell_right_layout"
+        android:layout_alignTop="@id/road_cond_bg"
+        android:layout_alignBottom="@id/road_cond_bg"
+        android:paddingTop="8.35260dp">
+
+    </RelativeLayout>
+</RelativeLayout>

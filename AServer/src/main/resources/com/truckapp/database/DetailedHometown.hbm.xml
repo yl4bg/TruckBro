@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="DetailedHometown" table="detailedhometown">
+        <id name="userId" column="userid">
+        </id>
+        <property name="province" column="province"/>
+        <property name="city" column="city"/>
+        <property name="district" column="district"/>
+    </class>
+
+</hibernate-mapping>
+	

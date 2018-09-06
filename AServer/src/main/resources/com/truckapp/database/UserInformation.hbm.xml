@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="UserInformation" table="userinformation">
+        <id name="userID" column="userid">
+        </id>
+        <property name="nickName" column="nickname"/>
+        <property name="homeTown" column="hometown"/>
+        <property name="portrait" column="portrait"/>
+        <property name="signature" column="signature"/>
+        <property name="myTruck" column="mytruck"/>
+        <property name="myTruckPicId" column="mytruckpicid"/>
+        <property name="boughtTime" column="boughttime"/>
+        <property name="driverLicensePic" column="driverlicensepic"/>
+        <property name="registrationPic" column="registrationpic"/>
+        <property name="licensePlate" column="licenseplate" />
+        <property name="showFPToDriver" column="showfptodriver" />
+        <property name="showFPToOwner" column="showfptoowner" />
+        <property name="showFPToHer" column="showfptoher" />
+        
+    </class>
+
+</hibernate-mapping>

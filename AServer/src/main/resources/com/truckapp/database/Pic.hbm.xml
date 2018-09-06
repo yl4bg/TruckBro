@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="Pic" table="pics">
+        
+		<composite-id name="picCompositeId">
+			<key-property name="eventId" column="eventid" />
+			<key-property name="picId" column="picid" />
+		</composite-id>
+		
+    </class>
+
+</hibernate-mapping>

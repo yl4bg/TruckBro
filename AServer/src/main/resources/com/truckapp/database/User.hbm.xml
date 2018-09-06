@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="User" table="users">
+        <id name="userID" column="userid">
+        </id>
+        <property name="username" column="username"/>
+        <property name="salt" column="salt"/>
+        <property name="pwdhash" column="password"/>
+        <property name="points" column="points" />
+        <property name="privilege" column="privilege">
+	        <type name="org.hibernate.type.EnumType">
+		        <param name="enumClass">com.truckapp.database.UserPrivilege</param>
+		        <param name="useNamed">true</param>
+	   		</type>
+    	</property>
+    	<property name="referPerson" column="referperson" />
+    	<property name="showUserIdToDriver" column="showuseridtodriver" />
+    	<property name="showUserIdToOwner" column="showuseridtoowner" />
+    	<property name="showUserIdToHer" column="showuseridtoher" />
+    	<property name="userType" column="usertype">
+    		<type name="org.hibernate.type.EnumType">
+		        <param name="enumClass">com.truckapp.database.UserType</param>
+		        <param name="useNamed">true</param>
+	   		</type>
+    	</property>
+    	<property name="driverType" column="drivertype">
+    		<type name="org.hibernate.type.EnumType">
+		        <param name="enumClass">com.truckapp.database.DriverType</param>
+		        <param name="useNamed">true</param>
+	   		</type>
+    	</property>
+    	
+        <one-to-one name="detailedHometown" class="DetailedHometown"
+			cascade="save-update"></one-to-one>
+			
+        <one-to-one name="location" class="UserLocation"
+			cascade="save-update"></one-to-one>
+    	
+    	<one-to-one name="device" class="UserDevice"
+			cascade="save-update"></one-to-one>
+			
+		<one-to-one name="userInformation" class="UserInformation"
+			cascade="save-update"></one-to-one>
+			
+		<set name="userGoodTypes" table="usergoodtypes" fetch="select" inverse="true">
+            <key>
+                <column name="userid" not-null="true"/>
+            </key>
+            <one-to-many class="UserGoodType" />
+        </set>
+        
+        <set name="userFrequentPlaces" table="userfrequentplaces" fetch="select" inverse="true">
+            <key>
+                <column name="userid" not-null="true"/>
+            </key>
+            <one-to-many class="UserFrequentPlace" />
+        </set>
+        
+        <set name="chatSettings" table="chatsettings" fetch="select" inverse="true">
+            <key>
+                <column name="userid" not-null="true"/>
+            </key>
+            <one-to-many class="ChatSetting" />
+        </set>
+        
+        <set name="pointsHistories" table="pointshistory" fetch="select" inverse="true">
+            <key>
+                <column name="userid" not-null="true"/>
+            </key>
+            <one-to-many class="PointsHistory" />
+        </set>
+		
+    </class>
+
+</hibernate-mapping>

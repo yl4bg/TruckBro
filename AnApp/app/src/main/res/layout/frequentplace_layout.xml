@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/upload_profile_image_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加常跑地"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/freqPlaces_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="39.220905dp"
+                android:padding="5dp"></ListView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39.220905dp"
+                android:text="(您还能添加5个常跑地)"
+                android:id="@+id/freq_place_number_hint"
+                android:paddingLeft="25dp"
+                android:textColor="#787878"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="89.88123dp"
+                android:layout_marginRight="89.88123dp"
+                android:layout_marginTop="43.57878dp">
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/province_field"
+                    android:layout_width="90dp"
+                    android:layout_height="150dp" />
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/city_field"
+                    android:layout_width="90dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentRight="true" />
+
+                <!--<kankan.wheel.widget.WheelView-->
+                <!--android:id="@+id/district_field"-->
+                <!--android:layout_width="90dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_toEndOf="@+id/city_field"-->
+                <!--android:layout_toRightOf="@+id/city_field" />-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44.668245dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="39.220905dp"
+
+                    android:text="常跑地讯息对其可见"
+                    android:textColor="#d2d2d2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(可多选)"
+                    android:textColor="#a0a0a0"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="25.602525dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginLeft="46.30245dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driver_checkbox_layout">
+
+                    <ImageView
+                        android:layout_width="15.25257dp"
+                        android:layout_height="15.25257dp"
+                        android:src="@drawable/new_unselected_box"
+                        android:id="@+id/driver_checkbox"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25.602525dp"
+                        android:text="司机"
+                        android:textColor="#b4b4b4"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54.473475dp"
+                    android:id="@+id/owner_checkbox_layout">
+
+                    <ImageView
+                        android:layout_width="15.25257dp"
+                        android:layout_height="15.25257dp"
+                        android:src="@drawable/new_unselected_box"
+                        android:id="@+id/owner_checkbox" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25.602525dp"
+                        android:text="货主"
+                        android:textColor="#b4b4b4"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54.473475dp"
+                    android:id="@+id/her_checkbox_layout">
+
+                    <ImageView
+                        android:layout_width="15.25257dp"
+                        android:layout_height="15.25257dp"
+                        android:src="@drawable/new_unselected_box"
+                        android:id="@+id/her_checkbox" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25.602525dp"
+                        android:text="其他"
+                        android:textColor="#b4b4b4"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.85511dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="59.920815dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:id="@+id/confirm_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/confirm_upload"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/cancel_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/cancel_upload">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="保存并返回上页"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

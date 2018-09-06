@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.nevvea.app.anapptest.Activities.DrivingMode">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/login_background"
+        android:scaleType="fitXY"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32.68408dp"
+                android:gravity="center"
+                android:text="最新路况"
+                android:id="@+id/newest_road_condition_title"
+                android:textSize="18sp"
+                android:textColor="#dcdcdc"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/upper_border"
+                android:layout_alignLeft="@id/newest_road_condition_title"
+                android:layout_alignRight="@id/newest_road_condition_title"
+                android:layout_alignBottom="@+id/road_cond_list" />
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/newest_road_condition_title"
+                android:id="@+id/road_cond_list"></ListView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="7.26313dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/road_cond_divider"
+                android:layout_below="@id/road_cond_list"
+                android:id="@+id/road_cond_divider" />
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_alignTop="@+id/driving_chat_box"
+                android:layout_alignBottom="@+id/driving_chat_box"
+                android:src="@drawable/lower_border"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/road_cond_divider"
+                android:id="@+id/driving_chat_box">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="32.68408dp"
+                    android:paddingLeft="11.98416dp"
+                    android:paddingRight="11.98416dp">
+
+                    <ImageView
+                        android:layout_width="28.44735dp"
+                        android:layout_height="33.25785dp"
+                        android:scaleType="center"
+                        android:id="@+id/driving_chat_prev_arrow"
+                        android:src="@drawable/last_arrow"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:layout_width="25.78411dp"
+                            android:layout_height="25.78411dp"
+                            android:id="@+id/driving_chat_group_img"
+                            android:src="@drawable/wuhan_group_img" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="聊天群"
+                            android:id="@+id/driving_chat_group_name"
+                            android:layout_marginLeft="5.08419dp"
+                            android:textColor="#d2d2d2"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="28.44735dp"
+                        android:layout_height="33.25785dp"
+                        android:scaleType="center"
+                        android:src="@drawable/next_arrow"
+                        android:id="@+id/driving_chat_next_arrow" />
+
+                </LinearLayout>
+
+                <anapp.truck.com.anapp.utility.ResizableListView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/transparent"
+                    android:id="@+id/driving_chat_listView"
+                    android:background="@drawable/driving_chat_bg"
+                    android:stackFromBottom="true"
+                    android:paddingBottom="15dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/driving_chat_voice_bg"
+                    android:paddingLeft="36.31565dp"
+                    android:paddingRight="21.06308dp"
+                    android:id="@+id/driving_mode_voice_panel"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/driving_chat_plus_button"
+                        android:src="@drawable/driving_plus_icon"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal">
+
+                        <!-- this relative layout exists so that the microphone button can stay
+          at a fixed position-->
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="按住说话"
+                                android:textColor="#d2d2d2"
+                                android:gravity="center"
+                                android:textSize="19sp"
+                                android:id="@+id/driving_chat_press_to_speak" />
+
+                            <!-- 录音动画 -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0:03"
+                                android:textSize="@dimen/chat_detail_timer_textsize"
+                                android:textColor="@color/white"
+                                android:background="@drawable/animation_list_speaking"
+                                android:id="@+id/driving_chat_timer_textview"
+                                android:gravity="center"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/driving_chat_voice_button"
+                            android:id="@+id/driving_chat_voice_button"
+                            android:layout_marginBottom="7.26313dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/driving_chat_keyboard_button"
+                        android:src="@drawable/driving_keyboard_icon"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/driving_mode_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25.42095dp"
+                    android:paddingRight="@dimen/chat_detail_toolbar_side_padding"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"
+                    android:background="@drawable/input_folded_background">
+
+                    <!-- 左-->
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/driving_mode_load_button"
+                        android:src="@drawable/load_button"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentLeft="true"
+                        android:paddingTop="@dimen/chat_detail_toolbuttons_topbuttom_padding"
+                        android:paddingBottom="@dimen/chat_detail_toolbuttons_topbuttom_padding"/>
+
+                    <!--右-->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/driving_mode_voice_switch"
+                        android:src="@drawable/voice_switch"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="@dimen/chat_detail_toolbuttons_topbuttom_padding"
+                        android:paddingBottom="@dimen/chat_detail_toolbuttons_topbuttom_padding" />
+
+                    <!--中-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        style="?android:attr/buttonStyleSmall"
+                        android:text="发送"
+                        android:id="@+id/driving_mode_send_button"
+                        android:layout_toLeftOf="@id/driving_mode_voice_switch"/>
+
+
+                    <EditText
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:id="@+id/driving_mode_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_toRightOf="@id/driving_mode_load_button"
+                        android:layout_toLeftOf="@id/driving_mode_send_button"
+                        android:layout_marginLeft="11.62dp"
+                        android:paddingLeft="7.263dp"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!-- 键盘出现时三个按键的部分-->
+
+
+</RelativeLayout>

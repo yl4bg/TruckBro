@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingTop="7.26dp"
+    android:paddingRight="@dimen/chat_detail_side_padding"
+    android:paddingLeft="@dimen/chat_detail_side_padding">
+
+    <!-- 上面时间的部分 平常是藏起来的 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_bubble_time_wrapper"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昨天 下午10:00"
+            android:textColor="@color/chat_bubble_time_textcolor"
+            android:textSize="@dimen/chat_detail_timer_textsize"
+            android:id="@+id/chat_bubble_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/chat_bubble_time_margin"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- 头像-->
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/chat_bubble_user_pic"
+        android:src="@drawable/prof3"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/chat_bubble_time_wrapper"
+        android:layout_marginTop="@dimen/chat_main_list_cell_topbottom_margin"
+        android:layout_marginLeft="7dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张帅"
+        android:id="@+id/chat_bubble_other_name"
+        android:layout_toLeftOf="@id/chat_bubble_user_pic"
+        android:layout_alignTop="@id/chat_bubble_user_pic"
+        android:paddingRight="12dp"
+        />
+
+    <!-- 头像右上角的icon -->
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="1dp"
+        android:id="@+id/chat_bubble_level_icon"
+        android:layout_toEndOf="@id/chat_bubble_other_name"
+        android:layout_toRightOf="@id/chat_bubble_other_name"
+        android:paddingTop="@dimen/chat_main_list_unread_margin"
+        android:layout_below="@id/chat_bubble_time_wrapper"/>
+
+    <!-- bubble的部分-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/chat_detail_bubble_max_width"
+        android:text="lajdfldkd"
+        android:textSize="15sp"
+        android:textColor="@color/chat_bubble_text_color"
+        android:background="@drawable/my_bubble"
+        android:id="@+id/chat_bubble_message"
+        android:layout_below="@id/chat_bubble_other_name"
+        android:layout_toLeftOf="@id/chat_bubble_user_pic"
+
+        android:paddingRight="@dimen/chat_bubble_side_padding"
+        android:paddingTop="@dimen/chat_bubble_padding"
+        android:paddingLeft="@dimen/chat_bubble_padding"
+        android:paddingBottom="@dimen/chat_bubble_padding"
+        android:paddingEnd="@dimen/chat_bubble_padding" />
+
+    <!-- 语音部分-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_detail_voice_indicator_imageview"
+        android:background="@drawable/animation_list_hearing_me"
+        android:scaleType="fitCenter"
+        android:layout_toLeftOf="@id/chat_bubble_user_pic"
+        android:layout_below="@id/chat_bubble_other_name"
+        android:layout_marginRight="@dimen/chat_bubble_voicemsg_left_padding"
+        android:layout_alignRight="@id/chat_bubble_message"
+        android:layout_marginTop="10dp"
+        android:paddingTop="@dimen/chat_bubble_padding"
+        android:paddingBottom="@dimen/chat_bubble_padding"
+        android:paddingRight="@dimen/chat_bubble_voicemsg_left_padding"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textColor="@color/chat_bubble_voice_length_color"
+        android:id="@+id/chat_bubble_voicemsg_length_textview"
+        android:layout_toLeftOf="@id/chat_bubble_message"
+        android:layout_below="@id/chat_bubble_other_name"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@id/chat_bubble_message"
+        android:paddingRight="@dimen/chat_bubble_voicemsg_length_left_padding"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_bubble_voicemsg_unplayed_reddot"
+        android:layout_alignTop="@+id/chat_bubble_voicemsg_length_textview"
+        android:layout_toLeftOf="@+id/chat_bubble_voicemsg_length_textview"
+        android:layout_toStartOf="@+id/chat_bubble_voicemsg_length_textview"
+        android:layout_alignBottom="@id/chat_bubble_voicemsg_length_textview"
+        android:src="@drawable/unheard"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

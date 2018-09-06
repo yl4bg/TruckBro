@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="311.58825dp"
+    android:layout_height="87.16dp"
+    android:background="@drawable/event_single_background_new_sos">
+
+
+    <RelativeLayout
+        android:layout_width="100.774dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/typeText"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sos_text" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="122.5653dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.07364dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="东南"
+                android:id="@+id/directionText"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.5dp"
+                android:text="10.5公里"
+                android:id="@id/distanceText"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.80523dp"
+            android:text="工人体育场南路"
+            android:id="@id/roadNum"
+            android:textColor="#dcdcdc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.349955dp"
+            android:id="@id/timeText"
+            android:text="30 分钟前"
+            android:textColor="#8c8c8c"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="67.15756dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="来自"
+                android:textColor="#b4b4b4"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="18dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="张全蛋"
+                android:id="@+id/left_banner_user_name"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.07364dp">
+
+            <ImageView
+                android:layout_width="22.878855dp"
+                android:layout_height="20.155185dp"
+                android:layout_marginLeft="14.13144dp"
+                android:src="@drawable/report_icon_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#ffffff"
+                android:id="@id/report_text"
+                android:layout_marginTop="2dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textSize="0sp"
+                android:textColor="#ffffff"
+                android:id="@id/upvote_text"
+                android:layout_marginTop="2dp"
+                android:text="" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

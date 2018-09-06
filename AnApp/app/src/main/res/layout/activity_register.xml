@@ -1,0 +1,327 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="me.nevvea.app.anapptest.Activities.LoginActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/login_background"
+        android:scaleType="fitXY"/>
+
+
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_phonenumber_edittext"
+        android:layout_marginTop="98.05225dp"
+        android:layout_marginLeft="87.15755dp"
+        android:paddingLeft="11.25785dp"
+        android:hint="手机号"
+        android:inputType="number"
+        android:textColorHint="@color/edittext_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/edittext_textsize"
+        android:background="@drawable/login_input_bg"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_phonenumber_edittext"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_marginTop="@dimen/forget_pw_margin_btw"
+        android:id="@+id/register_get_code">
+
+        <TextView
+            android:layout_width="77dp"
+            android:layout_height="40dp"
+            android:background="@drawable/get_confirm_code"
+            android:text="获取验证码"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/register_get_code_textview"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_width="77dp"
+            android:layout_height="40dp"
+            android:background="@drawable/resend_confirm_code"
+            android:text="(60)秒后\n重新读取"
+            android:gravity="center"
+            android:textColor="#191919"
+            android:id="@+id/register_resend_code_textview"
+            android:visibility="invisible"
+            android:textSize="11sp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/login_user_icon"
+        android:layout_alignRight="@+id/register_phonenumber_edittext"
+        android:layout_alignBottom="@id/register_phonenumber_edittext"
+        android:layout_marginRight="6.17366dp"
+        android:layout_marginBottom="8.17366dp"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_put_code"
+        android:layout_alignRight="@id/register_phonenumber_edittext"
+        android:layout_below="@id/register_phonenumber_edittext"
+        android:layout_toRightOf="@id/register_get_code"
+        android:layout_marginLeft="14.52626dp"
+        android:background="@drawable/input_confim_code"
+        android:hint="输入验证码"
+        android:inputType="number"
+        android:textColorHint="@color/edittext_color"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/forget_pw_margin_btw"
+        android:paddingLeft="13.07363dp"
+        android:textSize="@dimen/edittext_textsize"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/key_icon"
+        android:layout_alignRight="@id/register_put_code"
+        android:layout_alignBottom="@id/register_put_code"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="6.89997dp"/>
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_newpw_edittext"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_below="@id/register_get_code"
+        android:layout_marginTop="@dimen/forget_pw_margin_btw"
+        android:paddingLeft="11.62101dp"
+        android:hint="输入密码"
+        android:inputType="textPassword"
+        android:textColorHint="@color/edittext_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/edittext_textsize"
+        android:background="@drawable/login_input_bg"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/login_password_icon"
+        android:layout_alignRight="@+id/register_newpw_edittext"
+        android:layout_marginRight="6.17366dp"
+        android:layout_alignTop="@id/register_newpw_edittext"
+        android:layout_marginTop="8.98944dp"/>
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_confirm_newpw_edittext"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_below="@id/register_newpw_edittext"
+        android:layout_marginTop="@dimen/forget_pw_margin_btw"
+        android:paddingLeft="11.62101dp"
+        android:inputType="textPassword"
+        android:hint="确认密码"
+        android:textColorHint="@color/edittext_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/edittext_textsize"
+        android:background="@drawable/login_input_bg"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/login_password_icon"
+        android:layout_alignRight="@+id/register_confirm_newpw_edittext"
+        android:layout_marginRight="6.17366dp"
+        android:layout_alignTop="@id/register_confirm_newpw_edittext"
+        android:layout_marginTop="9.8999dp"/>
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="17sp"
+        android:textColor="#f0f0f0"
+        android:background="@drawable/login_button_bg_after"
+        android:layout_below="@+id/register_consent_checkBox"
+        android:layout_marginLeft="11.62101dp"
+        android:layout_marginRight="11.62101dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/register_button" />
+
+
+    <CheckBox
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text=""
+        android:button="@drawable/custom_checkbox"
+        android:textColor="#c8c8c8"
+        android:textSize="11sp"
+        android:checked="true"
+        android:id="@+id/register_consent_checkBox"
+        android:layout_below="@+id/register_refer_edittext"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_marginTop="10.25785dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我已阅读并同意服务条款和隐私政策"
+        android:id="@+id/enter_privacy"
+        android:layout_toRightOf="@id/register_consent_checkBox"
+        android:layout_alignBaseline="@id/register_consent_checkBox"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:layout_marginLeft="0dp"/>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_iam"
+        android:text="我是"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/forget_pw_margin_btw"
+        android:textSize="@dimen/edittext_textsize"
+        android:textColor="@color/edittext_color"
+        android:paddingLeft="11.62101dp"
+        android:background="@drawable/i_am_bg"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_below="@id/register_confirm_newpw_edittext" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_toRightOf="@id/register_iam"
+        android:layout_alignTop="@id/register_iam"
+        android:layout_alignBottom="@id/register_iam"
+        android:orientation="horizontal"
+        android:id="@+id/user_type_radiogroup"
+        android:layout_alignRight="@id/register_confirm_newpw_edittext">
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:button="@color/transparent"
+            android:text="司机"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:textColor="@drawable/radio_textcolor"
+            android:gravity="center"
+            android:background="@drawable/custom_radio_button"
+            android:checked="true"
+            android:id="@+id/iam_driver" />
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="货主"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:button="@color/transparent"
+            android:textColor="@drawable/radio_textcolor"
+            android:gravity="center"
+            android:background="@drawable/custom_radio_button"
+            android:id="@+id/iam_owner" />
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="其她"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:textColor="@drawable/radio_textcolor"
+            android:gravity="center"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:id="@+id/iam_other" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/register_iam"
+        android:layout_alignLeft="@id/register_iam"
+        android:id="@+id/register_driver_options"
+        android:layout_marginTop="12.71048dp"
+        >
+
+        <RadioButton
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="职业司机"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:gravity="center"
+            android:textColor="@drawable/radio_textcolor"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:id="@+id/iam_driver_professional" />
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="车主"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:checked="true"
+            android:textColor="@drawable/radio_textcolor"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:id="@+id/iam_driver_car_owner" />
+
+        <RadioButton
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="司机兼车主"
+            android:textColor="@drawable/radio_textcolor"
+            android:paddingLeft="@dimen/radiobutton_side_padding"
+            android:paddingRight="@dimen/radiobutton_side_padding"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:id="@+id/iam_driver_and_car_owner" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:hint="推荐人手机号（可选填）"
+        android:paddingLeft="11.62101dp"
+        android:layout_marginTop="12.71048dp"
+        android:textSize="@dimen/edittext_textsize"
+        android:textColorHint="@color/edittext_color"
+        android:textColor="@color/white"
+        android:background="@drawable/login_input_bg"
+        android:id="@+id/register_refer_edittext"
+        android:layout_alignLeft="@id/register_phonenumber_edittext"
+        android:layout_below="@id/register_driver_options"/>
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/call_icon"
+        android:layout_alignRight="@id/register_refer_edittext"
+        android:layout_alignTop="@id/register_refer_edittext"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="6.17dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="240dp"
+        android:src="@drawable/register_truckbro_name"
+        android:layout_marginLeft="17.79469dp"
+        android:layout_marginTop="31.95777dp"/>
+
+
+</RelativeLayout>

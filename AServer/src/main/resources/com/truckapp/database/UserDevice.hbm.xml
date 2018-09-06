@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="UserDevice" table="userdevices">
+        <id name="userID" column="userid">
+        </id>
+        <property name="deviceID" column="deviceid"/>
+        <property name="cookie" column="cookie"/>
+    </class>
+
+</hibernate-mapping>

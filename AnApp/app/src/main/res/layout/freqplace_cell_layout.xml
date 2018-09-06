@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="43.57878dp">
+
+    <TextView
+        android:id="@+id/freqPlace_text"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="福建省南平市延平区"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#d2d2d2"
+        android:textSize="15sp"
+        android:gravity="center_vertical"/>
+
+    <ImageView
+        android:layout_toLeftOf="@+id/delete_btn"
+        android:layout_width="0.54474dp"
+        android:layout_height="40.85511dp"
+        android:src="@drawable/divider2" />
+
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_width="59.920815dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="删除"
+        android:textColor="#787878"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+</RelativeLayout>

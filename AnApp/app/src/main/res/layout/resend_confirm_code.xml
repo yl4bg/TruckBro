@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@drawable/resend_confirm_code"
+    android:text="(60)秒后\n重新读取"
+    android:gravity="center"
+    android:textColor="#191919"
+    android:id="@+id/resend_code_textview"
+    android:textSize="11sp">
+
+</TextView>

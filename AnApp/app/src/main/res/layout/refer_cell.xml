@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="43.57878dp">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/refer_cell_number"
+        android:text="abc"
+        android:textColor="#AA000000"
+        android:gravity="left|center"
+        android:textSize="20sp"
+        android:paddingLeft="50dp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="删除"
+        android:id="@+id/refer_cell_delete"
+        android:textColor="#AA000000"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:textSize="15sp"/>
+
+</LinearLayout>

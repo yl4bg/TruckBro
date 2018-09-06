@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_background"
+    tools:context="me.nevvea.app.anapptest.Activities.UserProfile">
+
+    <!-- TODO: when saving user's profile pic save a larger copy for this page
+        and use a different file name-->
+
+    <!-- 上半部分-->
+    <ImageView
+        android:layout_width="@dimen/user_profile_pic_dimen"
+        android:layout_height="@dimen/user_profile_pic_dimen"
+        android:id="@+id/user_profile_user_portrait"
+        android:scaleType="centerCrop"
+        android:background="@drawable/prof3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/user_profile_padding"
+        android:layout_marginLeft="@dimen/user_profile_padding"
+        android:layout_marginRight="20.33676dp"
+        android:layout_marginBottom="@dimen/user_profile_padding"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刘帅"
+        android:textColor="@color/black"
+        android:id="@+id/user_profile_user_name"
+        android:paddingRight="7.61dp"
+        android:layout_marginBottom="6dp"
+        android:textSize="@dimen/user_profile_name_textsize"
+        android:layout_toRightOf="@id/user_profile_user_portrait"
+        android:layout_alignTop="@id/user_profile_user_portrait" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/user_profile_user_gender"
+        android:src="@drawable/male"
+        android:layout_alignTop="@id/user_profile_user_name"
+        android:layout_alignBottom="@id/user_profile_user_name"
+        android:layout_toRightOf="@id/user_profile_user_name"/>
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/user_profile_user_level_pic"
+        android:layout_toRightOf="@id/user_profile_user_portrait"
+        android:layout_below="@id/user_profile_user_name"
+        android:src="@drawable/barefoot"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="（赤脚）"
+        android:textColor="@color/super_high_level_color"
+        android:id="@+id/user_profile_user_level"
+        android:textSize="@dimen/user_profile_level_textsize"
+        android:layout_toRightOf="@id/user_profile_user_level_pic"
+        android:layout_alignTop="@id/user_profile_user_level_pic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="来自：吉林长春"
+        android:textColor="@color/black"
+        android:textSize="@dimen/user_profile_from_textsize"
+        android:layout_below="@id/user_profile_user_level_pic"
+        android:layout_toRightOf="@id/user_profile_user_portrait"
+        android:layout_alignBottom="@id/user_profile_user_portrait"
+        android:gravity="bottom"
+        android:id="@+id/user_profile_user_from"/>
+
+    <!-- this linear layout just serve as a separator -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_profile_user_portrait"
+        android:id="@+id/user_profile_separator"></LinearLayout>
+
+    <!-- 这个relativelayout是用来根据上面的高度动态地加深背景的-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/user_profile_separator"
+        android:background="@color/user_profile_transparent_grey">
+
+    </RelativeLayout>
+
+    <!-- 左边那三行字 跟图片右界限对其-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_profile_separator"
+        android:layout_alignRight="@id/user_profile_user_portrait"
+        android:gravity="right"
+        android:layout_marginLeft="-19.23dp">
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TA的卡车:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:id="@+id/user_profie_truck_textview"
+            android:layout_weight="4"
+            android:gravity="right" />
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系方式:"
+            android:gravity="right"
+            android:textColor="@color/black"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:id="@+id/user_profile_contact" />
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常跑地:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:gravity="right"
+            android:id="@+id/user_profile_common_places" />
+    </LinearLayout>
+
+    <!-- 右边那三行字 跟上面文字左边对其-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/user_profile_user_from"
+        android:layout_below="@id/user_profile_separator">
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="wrap_content"
+            android:text="东风天龙"
+            android:textColor="@color/user_profile_visible_info_textcolor"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:id="@+id/user_profile_user_truck"/>
+        <View
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="1dp"
+            android:background="@color/user_profile_red_line" />
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="wrap_content"
+            android:text="@string/private_info"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:textColor="@color/user_profile_private_info_textcolor"
+            android:id="@+id/user_profile_user_contact"
+            android:gravity="left" />
+        <View
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="1dp"
+            android:background="@color/user_profile_red_line" />
+        <TextView
+            android:layout_marginTop="@dimen/user_profile_padding"
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="wrap_content"
+            android:text="@string/private_info"
+            android:textSize="@dimen/user_profile_info_textsize"
+            android:textColor="@color/user_profile_private_info_textcolor"
+            android:id="@+id/user_profile_user_places"
+            android:gravity="left" />
+        <View
+            android:layout_width="@dimen/user_profile_red_line_length"
+            android:layout_height="1dp"
+            android:background="@color/user_profile_red_line" />
+    </LinearLayout>
+
+
+</RelativeLayout>

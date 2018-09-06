@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/play_voice_ani"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/playing_big0"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/playing_big1"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/playing_big2"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/playing_big3"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/playing_big4"
+        android:duration="100" />
+
+</animation-list>

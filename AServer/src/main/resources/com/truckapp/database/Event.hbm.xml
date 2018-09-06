@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="Event" table="events">
+        <id name="eventID" column="eventid">
+        </id>
+        <property name="eventType" column="eventtype"/>
+        <property name="occurTime" column="eventtime"/>
+        <property name="eventInfo" column="eventinfo"/>
+        <property name="longitude" column="longitude"/>
+        <property name="latitude" column="latitude"/>
+        <property name="radius" column="radius"/>
+        <property name="senderID" column="senderid"/>
+        
+        <property name="roadNum" column="roadnum" />
+        <property name="province" column="province" />
+        <property name="city" column="city" />
+        <property name="district" column="district" />
+        
+        <set name="pics" table="pics" fetch="select" inverse="true">
+            <key>
+                <column name="eventid" not-null="true"/>
+            </key>
+            <one-to-many class="Pic" />
+        </set>
+        
+        <set name="interactions" table="eventinteractions" fetch="select" inverse="true">
+            <key>
+                <column name="eventid" not-null="true"/>
+            </key>
+            <one-to-many class="EventInteraction" />
+        </set>
+        
+    </class>
+
+</hibernate-mapping>

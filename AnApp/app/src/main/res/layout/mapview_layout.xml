@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.02612dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/event_page_top_banner">
+
+        <ImageView
+            android:layout_width="40.31037dp"
+            android:layout_height="40.31037dp"
+            android:layout_marginLeft="21.78939dp"
+            android:background="@drawable/logo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="3dp"/>
+
+        <ImageView
+            android:id="@+id/newEventButton"
+            android:layout_width="82.08dp"
+            android:layout_height="22.23dp"
+            android:layout_marginRight="17.97624dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="14dp"
+            android:gravity="right"
+            android:scaleType="fitXY"
+            android:background="@drawable/publish_road_info" />
+
+
+    </RelativeLayout>
+
+    <com.amap.api.maps2d.MapView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/map"
+        android:background="@drawable/white_bg_round_corners"/>
+
+</LinearLayout>

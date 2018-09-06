@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:background="@drawable/sos_upper_bg"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/send"
+            android:text="信号弹"
+            android:textColor="#d20a0a"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/send_bar"
+        android:layout_below="@+id/top_bar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.886775dp"
+                android:layout_marginRight="16.886775dp"
+                android:layout_marginTop="15.25257dp"
+                android:background="@drawable/sos_text_2">
+
+                <EditText
+                    android:id="@+id/descriptionText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="123.11004dp"
+                    android:layout_marginLeft="16.886775dp"
+                    android:layout_marginRight="16.886775dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:hint="(在此输入求助信息)\n有困难, 找兄弟!"
+                    android:textColor="#b4b4b4"
+                    android:gravity="top"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.78939dp">
+
+                <FrameLayout
+                    android:id="@+id/record_voice_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49.02612dp"
+                    android:layout_marginTop="41.944575dp">
+
+                    <ImageView
+                        android:id="@+id/record_voice_ani"
+                        android:layout_width="119.296905dp"
+                        android:layout_height="14.70783dp"
+                        android:background="@drawable/playing_big0" />
+
+                    <TextView
+                        android:id="@+id/timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="按住说话"
+                        android:textColor="#141414"
+                        android:textSize="9sp" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="122.565315dp"
+                    android:layout_height="105.1338dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="46.30245dp"
+                    android:src="@drawable/sos_mic"
+                    android:id="@+id/sos_microphone"/>
+                <!--animation for this is animation_speaking_big-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="11.944575dp">
+
+                <TextView
+                    android:id="@+id/current_location_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="26.692005dp"
+                    android:gravity="center"
+                    android:text="您现在正在："
+                    android:textColor="#787878"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/current_location_tip">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="13.07364dp"
+                        android:layout_height="19.06572dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/location_icon2" />
+
+                    <TextView
+                        android:id="@+id/addressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#323232"
+                        android:textSize="15sp"
+                        android:text="湖北省，武汉市，蔡甸区"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.481395dp"
+                android:layout_marginTop="16.147265dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/divider_vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/take_photo_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/camera_upload_btn_bg"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/camera_icon"
+                        android:layout_width="26.147265dp"
+                        android:layout_height="21.78939dp"
+                        android:src="@drawable/photo_icon" />
+
+                    <TextView
+                        android:id="@+id/report_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.171025dp"
+                        android:layout_toRightOf="@+id/camera_icon"
+                        android:text="拍照"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#505050"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/upload_photo_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/camera_upload_btn_bg"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/upload_icon"
+                        android:layout_width="24.51306dp"
+                        android:layout_height="26.147265dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:id="@+id/upvote_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.171025dp"
+                        android:layout_toRightOf="@+id/upload_icon"
+                        android:paddingTop="3dp"
+                        android:text="上传"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#4d4d4d"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:padding="3dp">
+
+                <ImageView
+                    android:id="@+id/report_img_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:padding="1dp" />
+
+                <ImageView
+                    android:id="@+id/report_img_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:padding="1dp" />
+
+                <ImageView
+                    android:id="@+id/report_img_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:padding="1dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/send_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="163.42041dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sos_lower_bg">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="18.32621dp"
+            android:layout_marginTop="22.33413dp">
+
+            <ImageButton
+                android:id="@+id/send_sos_button"
+                android:layout_width="118.946935dp"
+                android:layout_height="122.215345dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/sos_send_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="发送"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="80.076dp"
+            android:layout_height="33.77355dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sos_cancel"
+            android:gravity="center"
+            android:text="取消发送"
+            android:id="@+id/sos_cancel_button"
+            android:textColor="#dcdcdc"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

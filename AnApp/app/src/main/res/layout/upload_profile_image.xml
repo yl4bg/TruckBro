@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/upload_profile_image_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传头像"
+            android:textSize="16sp"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/upload_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:layout_below="@+id/top_bar"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/take_photo_button"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/camera_upload_btn_bg"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/camera_icon"
+                android:layout_width="26.147265dp"
+                android:layout_height="21.78939dp"
+                android:src="@drawable/photo_icon" />
+
+            <TextView
+                android:id="@+id/report_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.171025dp"
+                android:layout_toRightOf="@+id/camera_icon"
+                android:text="拍照"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#505050"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/upload_photo_button"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/camera_upload_btn_bg"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/upload_icon"
+                android:layout_width="24.51306dp"
+                android:layout_height="26.147265dp"
+                android:src="@drawable/upload" />
+
+            <TextView
+                android:id="@+id/upvote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.171025dp"
+                android:layout_toRightOf="@+id/upload_icon"
+                android:text="上传"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#4d4d4d"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/divider_vertical" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/preview_big"
+        android:layout_below="@+id/upload_bar"
+        android:layout_width="374.777475dp"
+        android:layout_height="141.63102dp"
+        android:layout_marginTop="27.23673dp"
+        android:background="@drawable/profile_pic_preview_bg">
+
+        <ImageView
+            android:id="@+id/preview_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/preview_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27.23673dp"
+        android:layout_marginLeft="27.23673dp"
+        android:text="预览"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/preview_big"
+        android:textSize="15dp"/>
+    <LinearLayout
+        android:id="@+id/preview_small"
+        android:layout_below="@+id/preview_big"
+        android:layout_marginTop="76.262865dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="95.32857dp"
+            android:layout_height="96.962775dp"
+            android:layout_marginLeft="29.960415dp"
+            android:padding="1dp"
+            android:background="@drawable/preview1">
+            <ImageView
+                android:id="@+id/preview1_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="65.36817dp"
+            android:layout_height="65.36817dp"
+            android:layout_marginLeft="54.473475dp"
+            android:padding="1dp"
+            android:background="@drawable/preview2">
+            <ImageView
+                android:id="@+id/preview3_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="38.131425dp"
+            android:layout_height="38.131425dp"
+            android:layout_marginLeft="49.02612dp"
+            android:padding="1dp"
+            android:background="@drawable/preview3">
+            <ImageView
+                android:id="@+id/preview2_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.85511dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59.920815dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/confirm_upload"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/confirm_upload"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认上传"
+                android:textColor="#ffffff"
+                android:textSize="15sp"/>
+            </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/cancel_upload"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/cancel_upload">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消上传"
+                android:textColor="#ffffff"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

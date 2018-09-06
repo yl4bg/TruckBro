@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sos_new_bg">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="49.02612dp"
+        android:gravity="center"
+        android:background="@drawable/sos_upper_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信号弹"
+            android:textColor="#d20a0a"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numNotifiedText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56.41805dp"
+                android:gravity="center"
+                android:text="..."
+                android:textColor="#d23232"
+                android:textSize="80sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="77.89707dp"
+                android:layout_marginTop="54.433875dp"
+                android:gravity="center"
+                android:text="位兄弟已收到求助"
+                android:textColor="#c81414"
+                android:textSize="30dp" />
+
+
+            <include
+                android:id="@+id/cancel_button"
+                layout="@layout/sos_waiting_sosbutton" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

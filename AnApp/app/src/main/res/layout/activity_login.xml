@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="me.nevvea.app.anapptest.Activities.LoginActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/login_background"
+        android:scaleType="fitXY"/>
+
+
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:id="@+id/login_phonenumber_edittext"
+        android:layout_marginTop="54.47347dp"
+        android:layout_marginLeft="87.15755dp"
+        android:paddingLeft="13.80dp"
+        android:hint="手机号"
+        android:textColor="@color/edittext_color"
+        android:textColorHint="@color/edittext_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:textSize="@dimen/edittext_textsize"
+        android:background="@drawable/login_input_bg">
+        <requestFocus></requestFocus>
+        </EditText>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/login_user_icon"
+        android:layout_alignRight="@+id/login_phonenumber_edittext"
+        android:layout_alignBottom="@id/login_phonenumber_edittext"
+        android:layout_marginRight="6.17366dp"
+        android:layout_marginBottom="10.17366dp"/>
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:id="@+id/login_password_edittext"
+        android:layout_alignLeft="@id/login_phonenumber_edittext"
+        android:layout_below="@id/login_phonenumber_edittext"
+        android:layout_marginTop="10.89469dp"
+        android:paddingLeft="13.80dp"
+        android:inputType="textPassword"
+        android:hint="密码"
+        android:textColor="@color/edittext_color"
+        android:textColorHint="@color/edittext_color"
+        android:textSize="@dimen/edittext_textsize"
+        android:background="@drawable/login_input_bg"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/login_password_icon"
+        android:layout_alignRight="@+id/login_password_edittext"
+        android:layout_marginRight="6.17366dp"
+        android:layout_alignTop="@id/login_password_edittext"
+        android:layout_marginTop="9.8999dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册新用户"
+        android:textSize="13.5sp"
+        android:padding="20dp"
+        android:textColor="@color/edittext_color"
+        android:layout_marginLeft="27.96305dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="525dp"
+        android:id="@+id/login_register_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码"
+        android:textSize="13.5sp"
+        android:padding="20dp"
+        android:textColor="@color/edittext_color"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="29.77883dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="525dp"
+        android:id="@+id/login_forget_pw_button" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:textSize="17sp"
+        android:textColor="#f0f0f0"
+        android:background="@drawable/login_button_bg_after"
+        android:layout_marginLeft="11.62101dp"
+        android:layout_marginRight="11.62101dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="410dp"
+        android:id="@+id/login_button" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="250dp"
+        android:src="@drawable/login_truckbro_name"
+        android:layout_marginLeft="17.79469dp"
+        android:layout_marginTop="31.95777dp"/>
+
+</RelativeLayout>

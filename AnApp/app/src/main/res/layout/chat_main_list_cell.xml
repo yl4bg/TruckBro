@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="11.98416dp"
+    android:paddingRight="12.71048dp"
+    android:id="@+id/chat_main_list_cell_relative">
+
+<!--头像-->
+    <ImageView
+        android:layout_width="61.7dp"
+        android:layout_height="61.7dp"
+        android:layout_marginTop="7.26313dp"
+        android:layout_marginBottom="7.26313dp"
+        android:id="@+id/chat_main_list_user_pic"
+        android:src="@drawable/prof1"
+        android:layout_marginRight="14dp"/>
+
+<!--名字-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张全蛋"
+        android:paddingLeft="0.52626dp"
+        android:id="@+id/chat_main_list_user_name"
+        android:layout_alignTop="@+id/chat_main_list_user_pic"
+        android:layout_marginTop="5.08419dp"
+        android:layout_toRightOf="@+id/chat_main_list_user_pic"
+        android:textColor="@color/black"
+        android:textSize="17sp"/>
+<!--未读数-->
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:text="10"
+        android:layout_marginTop="3.63156dp"
+        android:id="@+id/chat_main_list_unread_textview"
+        android:textColor="#fff"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/unread"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_toStartOf="@id/chat_main_list_user_name"
+        android:layout_toLeftOf="@id/chat_main_list_user_name"
+        android:layout_marginRight="8dp" />
+<!--信息-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+        android:maxWidth="148.89415dp"
+        android:maxHeight="20dp"
+        android:paddingLeft="0.52625dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/chat_main_list_last_msg"
+        android:layout_toRightOf="@+id/chat_main_list_user_pic"
+        android:layout_alignBottom="@id/chat_main_list_user_pic"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/chat_time_grey"
+        android:textSize="15sp"
+
+        />
+<!--时间-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上午 11:50"
+        android:id="@+id/chat_main_list_last_time"
+        android:layout_alignTop="@id/chat_main_list_user_pic"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/chat_time_grey"
+        android:textSize="11sp"
+
+        />
+<!--小锁-->
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="19dp"
+        android:id="@+id/chat_main_list_locked"
+        android:src="@drawable/lock_20_25"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="5dp"
+        android:layout_alignBottom="@id/chat_main_list_user_pic"
+        android:layout_toLeftOf="@+id/chat_main_list_muted"
+        android:visibility="invisible"
+        />
+<!--喇叭-->
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:id="@+id/chat_main_list_muted"
+        android:src="@drawable/mute_22_25"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="5dp"
+        android:layout_alignBottom="@id/chat_main_list_user_pic"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16.34204dp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

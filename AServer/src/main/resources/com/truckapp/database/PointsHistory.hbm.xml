@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.truckapp.database">
+
+    <class name="PointsHistory" table="pointshistory">
+        <id name="userID" column="userid">
+        </id>
+        <property name="pDate" column="pdate"/>
+        <property name="pDesc" column="pdesc"/>
+        <property name="pDiff" column="pdiff"/>
+    </class>
+
+</hibernate-mapping>
